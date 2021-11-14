@@ -29,9 +29,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="bg-transparent">
-        <p className="p-5 m-5 bg-gray-900 text-white">
-          {this.state.apiResponse}
-        </p>
+        {/* <p className="p-5 m-5 bg-gray-900 text-white">
+          // {this.state}
+        </p> */}
         <Router>
           <Header />
           <Switch>
