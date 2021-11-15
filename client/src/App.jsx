@@ -13,7 +13,7 @@ const App = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch("/api")
+    fetch("http://localhost:9000/api")
       .then((res) => res.json())
       .then((data) => setData(data.message));
   }, []);
