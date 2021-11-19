@@ -2,4 +2,4 @@ import axios from "axios";
 
 const url = "http://localhost:3001/post";
 
-export const fetchPost = () => axios.get(url);
+export const fetchPosts = () => axios.get(url);

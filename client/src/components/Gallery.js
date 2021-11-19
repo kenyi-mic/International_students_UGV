@@ -1,10 +1,9 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import galleryData from "./data.json";
-
+import combineReducers from "../reducers/index";
 function Gallery() {
   const posts = useSelector((state) => state.posts);
-  console.log(posts);
 
   return (
     <div className="container mx-auto">
