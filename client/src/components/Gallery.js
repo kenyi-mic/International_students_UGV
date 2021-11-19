@@ -1,7 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import galleryData from "./data.json";
 
 function Gallery() {
+  const posts = useSelector((state) => state.posts);
+  console.log(posts);
+
   return (
     <div className="container mx-auto">
       <div className=" w-full h-2/4 md:pb-40 bg-gray-400 border border-gray-500 border-t-0 mb-2">

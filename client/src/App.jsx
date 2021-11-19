@@ -8,9 +8,16 @@ import Contact from "./components/Contact";
 import FAQ from "./components/Faq";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Footer from "./components/Footer";
+import { useDispatch } from "react-redux";
+import { getPosts } from "./actions/posts";
 
 const App = () => {
   const [data, setData] = useState(null);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getPosts);
+  }, []);
 
   useEffect(() => {
     fetch("/post")

@@ -1,3 +1,24 @@
-export const newPost = (req, res) => {
-  res.send("Welcome home!");
+import PostFeeds from "../models/postFeeds.js";
+
+export const getPosts = async (req, res) => {
+  try {
+    const postFeeds = await PostFeeds.find();
+
+    res.status(200).json(postFeeds);
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+};
+
+export const createPost = async (req, res) => {
+  const post = req.body;
+
+  const newPost = new PostFeeds(post);
+  try {
+    await newPost.save();
+
+    res.status(201).json(newPost);
+  } catch (error) {
+    res.status(409).json({ message: error.message });
+  }
 };
