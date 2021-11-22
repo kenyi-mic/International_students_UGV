@@ -54,7 +54,6 @@ function Contact() {
             <legend className="font-font-head">Name:</legend>
             <input
               className="outline-none bg-gray-500 w-full rounded-lg "
-              command
               type="text"
               name={name}
               value={name}

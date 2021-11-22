@@ -1,9 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import galleryData from "./data.json";
-import combineReducers from "../reducers/index";
+import Post from "./Post/post";
+
 function Gallery() {
   const posts = useSelector((state) => state.posts);
+  console.log(posts);
 
   return (
     <div className="container mx-auto">
@@ -13,9 +15,11 @@ function Gallery() {
         </h1>
       </div>
       <h2>Beginning of the Journey - 2019</h2>
+      <Post />
+      <Post />
       <div className="mx-3">
         <div className="grid grid-row-dense md:grid-col m-3 grid-cols-4">
-          <div classname="mx-3">
+          <div className="mx-3">
             <img
               className="w-80 h-60"
               src={galleryData.ninetheen.image0}

@@ -5,6 +5,7 @@ import About from "./components/About";
 import Profile from "./components/Profile";
 import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
+import Form from "./components/Admin/Form";
 import FAQ from "./components/Faq";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Footer from "./components/Footer";
@@ -12,24 +13,14 @@ import { useDispatch } from "react-redux";
 import { getPosts } from "./actions/posts";
 
 const App = () => {
-  const [data, setData] = useState(null);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getPosts);
-  }, []);
-
-  useEffect(() => {
-    fetch("/post")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="bg-transparent">
-      <p className="p-5 m-5 bg-gray-900 text-white">
-        {!data ? "Loading..." : data}
-      </p>
       <Router>
         <Header />
         <Switch>
@@ -44,6 +35,9 @@ const App = () => {
           </Route>
           <Route path="/gallery">
             <Gallery />
+          </Route>
+          <Route path="/admin">
+            <Form />
           </Route>
           <Route path="/faq">
             <FAQ />

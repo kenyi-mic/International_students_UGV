@@ -13,12 +13,11 @@ const CONNECTION_URL =
   "mongodb+srv://kenyi:kenyi%40123@cluster0.hyr2a.mongodb.net/students?retryWrites=true&w=majority";
 const port = process.env.PORT || 3001;
 
-app.use("/post", postRoute);
-
 app.use("/", (req, res) => {
   res.send("Welcome to express server!");
 });
 
+app.use("/post", postRoute);
 //database connection
 mongoose
   .connect(CONNECTION_URL, {

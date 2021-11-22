@@ -4,6 +4,7 @@ const feedSchema = mongoose.Schema({
   title: String,
   description: String,
   creator: String,
+  image: String,
   createdAt: {
     type: Date,
     default: new Date(),
