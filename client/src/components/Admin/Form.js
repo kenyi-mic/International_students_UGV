@@ -16,7 +16,7 @@ function Form() {
 
   return (
     <div className="container mx-auto">
-      <form className="flex  bg-gray-400 w-3/5 mx-auto my-10 p-5">
+      <form className="bg-gray-400 w-3/5 mx-auto my-10 p-5">
         <fieldset>
           <legend className="text-black text-xl text-center font-bold font-font-head">
             Add new post
@@ -58,14 +58,14 @@ function Form() {
             multiple="false"
             onDone={({ base64 }) => setPostData({ ...postData, image: base64 })}
           />
-          <div className="grid grid-cols-2">
+          <div className="flex justify-space-around md:space-x-10 ">
             <input
-              className=" text-grey-500 bg-pink-800 hover:bg-red-500 font-font-head p-2 my-2 mr-10"
+              className=" text-gray-800 bg-pink-800 hover:bg-red-500 font-font-head p-2 my-2 "
               type="submit"
               value="Submit"
             />
             <input
-              className="ml-10 cursor-pointer text-grey-500 bg-gray-800 hover:bg-pink-500 justify-end font-font-head p-2 my-2 "
+              className=" cursor-pointer text-gray-800 bg-green-800 hover:bg-yellow-500  font-font-head p-2 my-2 "
               type="button"
               onClick={clear}
               value="Clear"
