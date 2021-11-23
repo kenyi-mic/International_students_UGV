@@ -4,21 +4,15 @@ import FileBase from "react-file-base64";
 import { createPost, updatePost } from "../../actions/posts";
 
 function Form() {
-  const [creator, setCreator] = useState("");
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
+  const [postData, setPostData] = useState({
+    creator: "",
+    title: "",
+    description: "",
+    image: "",
+  });
+  const clear = (e) => {};
 
-  function handleCreatorChange(e) {
-    setCreator(e.target.value);
-  }
-
-  function handleTitleChange(e) {
-    setTitle(e.target.value);
-  }
-
-  const handleDescriptionChange = (e) => {
-    setDescription(e.target.value);
-  };
+  const handleSubmit = (e) => {};
 
   return (
     <div className="container mx-auto">
@@ -31,38 +25,52 @@ function Form() {
           <input
             className="outline-none bg-gray-500 w-full  "
             type="text"
-            name={creator}
-            value={creator}
-            onchange={handleCreatorChange}
+            name="creator"
+            value={postData.creator}
+            onChange={(e) =>
+              setPostData({ ...postData, creator: e.target.value })
+            }
           />
           <br />
           <legend className="font-font-head">Title:</legend>
           <input
             className="outline-none bg-gray-500 w-full "
             type="text"
-            name={title}
-            value={title}
-            onchange={handleTitleChange}
+            name="title"
+            value={postData.title}
+            onChange={(e) =>
+              setPostData({ ...postData, title: e.target.value })
+            }
           />
           <br />
           <legend className="font-font-head">Description</legend>
           <textarea
             className="outline-none bg-gray-500 w-full h-2/4  "
             type="text"
-            name={description}
-            value={description}
-            onChange={handleDescriptionChange}
+            name="description"
+            value={postData.description}
+            onChange={(e) =>
+              setPostData({ ...postData, description: e.target.value })
+            }
           />
           <FileBase
             type="file"
             multiple="false"
-            onDone={({ base64 }) => setData({ ...data, image: base64 })}
+            onDone={({ base64 }) => setPostData({ ...postData, image: base64 })}
           />
-          <input
-            className="block text-grey-500 bg-pink-800 hover:bg-red-500 font-font-head p-2 my-2 "
-            type="submit"
-            value="Submit"
-          />
+          <div className="grid grid-cols-2">
+            <input
+              className=" text-grey-500 bg-pink-800 hover:bg-red-500 font-font-head p-2 my-2 mr-10"
+              type="submit"
+              value="Submit"
+            />
+            <input
+              className="ml-10 cursor-pointer text-grey-500 bg-gray-800 hover:bg-pink-500 justify-end font-font-head p-2 my-2 "
+              type="button"
+              onClick={clear}
+              value="Clear"
+            />
+          </div>
         </fieldset>
       </form>
     </div>
