@@ -17,10 +17,17 @@ function Banner() {
           <img src="https://cutt.ly/6Rg3dyM" alt="" />
         </div>
         <div>
-          <img src="https://int.ugv.edu.bd/images/slider_images/1574257058.JPG" alt="" />
+          <img
+            src="https://int.ugv.edu.bd/images/slider_images/1574257058.JPG"
+            alt=""
+          />
         </div>
         <div>
-          <img className ="w-full max-h-bannerHeight" src="https://buff.ly/3moluYK" alt="" />
+          <img
+            className="w-full max-h-bannerHeight"
+            src="https://buff.ly/3HXztxH"
+            alt=""
+          />
         </div>
       </Carousel>
     </div>

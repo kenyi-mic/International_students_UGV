@@ -8,7 +8,7 @@ function About() {
         <div className="m-4">
           <img
             className="img-responsive rounded-xl h-72"
-            src="https://buff.ly/3moluYK"
+            src="https://buff.ly/3HXztxH"
             alt="UGV international students"
           />
         </div>
