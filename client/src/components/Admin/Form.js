@@ -4,6 +4,7 @@ import FileBase from "react-file-base64";
 import { createPost, updatePost } from "../../actions/posts";
 
 function Form() {
+  const dispatch = useDispatch();
   const [postData, setPostData] = useState({
     creator: "",
     title: "",
@@ -12,7 +13,10 @@ function Form() {
   });
   const clear = (e) => {};
 
-  const handleSubmit = (e) => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(createPost(postData));
+  };
 
   return (
     <div className="container mx-auto">
@@ -55,7 +59,7 @@ function Form() {
           />
           <FileBase
             type="file"
-            multiple="false"
+            multiple={false}
             onDone={({ base64 }) => setPostData({ ...postData, image: base64 })}
           />
           <div className="flex justify-space-around md:space-x-10 ">
