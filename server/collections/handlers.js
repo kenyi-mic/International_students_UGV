@@ -3,7 +3,6 @@ import PostFeeds from "../models/postFeeds.js";
 export const getPosts = async (req, res) => {
   try {
     const postFeeds = await PostFeeds.find();
-
     res.status(200).json(postFeeds);
   } catch (error) {
     res.status(404).json({ message: error.message });
