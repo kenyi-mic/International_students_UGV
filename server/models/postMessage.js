@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const feedSchema = mongoose.Schema({
+const postSchema = mongoose.Schema({
   title: String,
   description: String,
   creator: String,
@@ -11,6 +11,6 @@ const feedSchema = mongoose.Schema({
   },
 });
 
-const postFeeds = mongoose.model("postFeeds", feedSchema);
+const postMessage = mongoose.model("postMessage", postSchema);
 
-export default postFeeds;
+export default postMessage;

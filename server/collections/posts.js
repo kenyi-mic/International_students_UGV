@@ -1,9 +1,9 @@
-import PostFeeds from "../models/postFeeds.js";
+import PostMessage from "../models/postMessage.js";
 
 export const getPosts = async (req, res) => {
   try {
-    const postFeeds = await PostFeeds.find();
-    res.status(200).json(postFeeds);
+    const postMessage = await postMessage.find();
+    res.status(200).json(postMessage);
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
@@ -12,7 +12,7 @@ export const getPosts = async (req, res) => {
 export const createPost = async (req, res) => {
   const post = req.body;
 
-  const newPost = new PostFeeds(post);
+  const newPost = new PostMessage(post);
   try {
     await newPost.save();
 

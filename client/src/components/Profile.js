@@ -6,7 +6,7 @@ function Profile() {
     michael: {
       name: "Michael Henry",
       age: 23,
-      img: "https://buff.ly/3vYZvuS",
+      img: "https://buff.ly/3xEKQ8K",
       course: "Computer Science & Engineering",
       clasOf: "'23",
       country: "South Sudan",

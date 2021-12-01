@@ -1,5 +1,5 @@
 import express from "express";
-import { getPosts, createPost } from "../collections/handlers.js";
+import { getPosts, createPost } from "../collections/posts.js";
 const router = express.Router();
 
 router.get("/", getPosts);

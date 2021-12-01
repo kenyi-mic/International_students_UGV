@@ -11,7 +11,14 @@ function Form() {
     description: "",
     image: "",
   });
-  const clear = (e) => {};
+  const clear = (e) => {
+    setPostData({
+      creator: "",
+      title: "",
+      description: "",
+      image: {},
+    });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
