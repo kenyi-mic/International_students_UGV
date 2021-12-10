@@ -14,7 +14,7 @@ function Profile() {
     duol: {
       name: "Duol Jock",
       age: 25,
-      img: "https://buff.ly/3BoGNOk",
+      img: "https://cutt.ly/CYQR8Sn",
       course: "Computer Science & Engineering",
       clasOf: "'22",
       country: "South Sudan",
@@ -22,7 +22,7 @@ function Profile() {
     Baha: {
       name: "Bahaaeldin  Alhout",
       age: 21,
-      img: "https://buff.ly/3vUMmCV",
+      img: "https://cutt.ly/rYQRDq0",
       course: "Computer Science & Engineering",
       clasOf: "'22",
       country: "Palestine",
@@ -30,7 +30,7 @@ function Profile() {
     emma: {
       name: "Emmanuel Abbe",
       age: 22,
-      img: "https://buff.ly/3vW3KqK",
+      img: "https://cutt.ly/4YQEDb9",
       course: "Computer Science & Engineering",
       clasOf: "'23",
       country: "South Sudan",
@@ -46,7 +46,7 @@ function Profile() {
     hosam: {
       name: "Hosam Nafez",
       age: 22,
-      img: "https://buff.ly/2Zry7cB",
+      img: "https://cutt.ly/tYQzS1P",
       course: "Civil Engineering",
       clasOf: "'22",
       country: "Palestine",
@@ -54,7 +54,7 @@ function Profile() {
     tigo: {
       name: "Lawrence Hillary",
       age: 24,
-      img: "https://buff.ly/3blX5wD",
+      img: "https://cutt.ly/6YQYppt",
       course: "Business Administration",
       clasOf: "'22",
       country: "South Sudan",
@@ -70,7 +70,7 @@ function Profile() {
     ben: {
       name: "Agolbeny Malual",
       age: 24,
-      img: "https://buff.ly/3nIpPp4",
+      img: "https://cutt.ly/eYQUeex",
       course: "Computer Science & Engineering",
       clasOf: "'22",
       country: "South Sudan",
@@ -247,10 +247,10 @@ function Profile() {
           <p className="pt-6 md:px-8  space-y-4 text-bold">
             Hi, My name is <strong>{students.Baha.name}</strong> from{" "}
             {students.Baha.country}, studying {students.Baha.course} in
-            university of global village(UGV). Concerntrating on Game
-            development with Java. Extra-Curriculum in pragramming contest, and
-            virtual game research. I'm {students.Baha.age} years old, I love
-            video gaming and Soccer.
+            university of global village(UGV). Concerntrating on App development
+            with flutter. Extra-Curriculum in pragramming contest, and virtual
+            game research. I'm {students.Baha.age} years old, I love video
+            gaming and Soccer.
           </p>
           <button className="bg-gray-700 text-white hover:bg-gray-900 text-bold p-2 m-5">
             View Student Profile

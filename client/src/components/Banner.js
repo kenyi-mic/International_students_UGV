@@ -25,7 +25,7 @@ function Banner() {
         <div>
           <img
             className="w-full max-h-bannerHeight"
-            src="https://buff.ly/3HXztxH"
+            src="https://cutt.ly/XYQfUHz"
             alt=""
           />
         </div>

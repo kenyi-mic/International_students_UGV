@@ -14,6 +14,7 @@ function Gallery() {
       {posts.map((post) => (
         <div key={post._id} className="">
           <Post post={post} />
+          <div>{post.image}</div>
         </div>
       ))}
     </div>
