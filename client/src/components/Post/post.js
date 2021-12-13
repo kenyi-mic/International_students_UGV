@@ -4,24 +4,20 @@ import moment from "moment";
 function Post({ post }) {
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg">
-      <img src="https://cutt.ly/EYTajPV" alt="" className="w-full" />
+      <img src={post.image} alt="" className="w-full" />
       <div className="px-6 py-4">
         <div className="font-bold text-purple-700 text-xl mb-2 underline">
-          The Ancient building of Room
+          {post.title}
         </div>
         <div className="text-gray-700 font-bold ">
-          <p>
-            This place was build earlier 80 AD when Roman emperor is the one in
-            charge of power, they designs and ways of doing thing were more
-            loved by the locals.
-          </p>
+          <p>{post.description}</p>
         </div>
         <ul>
           <li>
-            <strong>Created: {moment(new Date()).fromNow()}</strong>
+            <strong>Created: {moment(post.createdAt).fromNow()}</strong>
           </li>
           <li>
-            <strong>By: Mike</strong>
+            <strong>By: {post.creator}</strong>
           </li>
         </ul>
         <button className="button bg-blue-800 p-2 my-3 font-bold rounded hover:bg-blue-500">
