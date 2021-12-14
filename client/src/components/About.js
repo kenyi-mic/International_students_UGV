@@ -1,4 +1,5 @@
 import React from "react";
+import Carousel3 from "../images/carousel1.jpeg";
 
 function About() {
   return (
@@ -8,7 +9,7 @@ function About() {
         <div className="m-4">
           <img
             className="img-responsive rounded-xl h-72"
-            src="https://cutt.ly/XYQfUHz"
+            src={Carousel3}
             alt="UGV international students"
           />
         </div>

@@ -1,5 +1,8 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Carousel1 from "../images/carousel.jpg";
+import Carousel2 from "../images/carousel0.jpg";
+import Carousel3 from "../images/carousel1.jpeg";
 
 function Banner() {
   return (
@@ -14,20 +17,13 @@ function Banner() {
         interval={5000}
       >
         <div>
-          <img src="https://cutt.ly/6Rg3dyM" alt="" />
+          <img src={Carousel1} alt="" />
         </div>
         <div>
-          <img
-            src="https://int.ugv.edu.bd/images/slider_images/1574257058.JPG"
-            alt=""
-          />
+          <img src={Carousel2} alt="" />
         </div>
         <div>
-          <img
-            className="w-full max-h-bannerHeight"
-            src="https://cutt.ly/XYQfUHz"
-            alt=""
-          />
+          <img className="w-full max-h-bannerHeight" src={Carousel3} alt="" />
         </div>
       </Carousel>
     </div>
